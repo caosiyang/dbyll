@@ -1,6 +1,55 @@
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:500&subset=latin,latin-ext);
+/*@import url(http://fonts.googleapis.com/css?family=Ubuntu:500&subset=latin,latin-ext);*/
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Ubuntu Medium'), local('Ubuntu-Medium'), url(http://fonts.gstatic.com/s/ubuntu/v7/MLKvhAbswThSVACnSTWCpxJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic */
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Ubuntu Medium'), local('Ubuntu-Medium'), url(http://fonts.gstatic.com/s/ubuntu/v7/IiMFELcoPB-OzGzq14k4ehJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Ubuntu Medium'), local('Ubuntu-Medium'), url(http://fonts.gstatic.com/s/ubuntu/v7/H2j4_4xA-HIuoc_A3BIwVBJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+    unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Ubuntu Medium'), local('Ubuntu-Medium'), url(http://fonts.gstatic.com/s/ubuntu/v7/EtSRPnpS3nIR-zKYiR-sDBJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Ubuntu Medium'), local('Ubuntu-Medium'), url(http://fonts.gstatic.com/s/ubuntu/v7/gMhvhm-nVj1086DvGgmzBxJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Ubuntu Medium'), local('Ubuntu-Medium'), url(http://fonts.gstatic.com/s/ubuntu/v7/OsJ2DjdpjqFRVUSto6IffFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
 
-body{
+
+body {
 	color: #2c3e50;
 }
 
@@ -45,16 +94,19 @@ a.nav-link:hover { color: #777 }
 
 #contact-list li .fa,
 article .share .btn {
-	-o-transition:color .2s ease-out, background 1s ease-in;
-  -ms-transition:color .2s ease-out, background 1s ease-in;
-  -moz-transition:color .2s ease-out, background 1s ease-in;
-  -webkit-transition:color .2s ease-out, background 1s ease-in;
-  transition:color .2s ease-out, background 1s ease-in;
+    -o-transition:color .2s ease-out, background 1s ease-in;
+    -ms-transition:color .2s ease-out, background 1s ease-in;
+    -moz-transition:color .2s ease-out, background 1s ease-in;
+    -webkit-transition:color .2s ease-out, background 1s ease-in;
+    transition:color .2s ease-out, background 1s ease-in;
 }
 #contact-list li:hover .fa-twitter,
 article .share .twitter:hover {
-	color: #00ACEE;
+    color: #00ACEE;
 	border-color: #00ACEE;
+}
+#contact-list li:hover .fa-weibo {
+	color: #FF0000;
 }
 #contact-list li:hover .fa-linkedin {
 	color: #1D87BD;
@@ -82,7 +134,7 @@ article .share .gplus:hover {
 }
 
 .page-header {
-	color: #e74c3c;
+	color: #446688;
 	text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
 }
 
@@ -117,20 +169,20 @@ article.home h4,
 article.home h5,
 article.home h6 {
 	font-family: 'Ubuntu', sans-serif;
-	color: #f2756a;
+	color: #446688;
 }
 
 article.home h1 a,
 article.home h2 a,
 article.home h3 a,
 article.home h4 a {
-	color: #f2756a;
+	color: #446688;
 }
 article.home h1 a:hover,
 article.home h2 a:hover,
 article.home h3 a:hover,
 article.home h4 a:hover {
-	color: #e74c3c;
+	color: #2c3e50;
 }
 
 .author .author-image {
@@ -168,12 +220,26 @@ footer {
 
 .badge { background: #F2756A; }
 
-#nav-menu{
+#nav-menu {
     position: fixed;
     top: 45px;
     right: 45px;
     z-index: 2000;
 }
+
+#sidebar-nav-menu {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2000;
+}
+
+#clustrmaps {
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+}
+
 #nav-menu .dropdown-menu {
     left: inherit;
     right: 0px;
@@ -183,3 +249,6 @@ ul.dropdown-menu>li>a>i.fa {
     width: 1.3em;
 }
 
+.img-circle img {
+    border-radius: 10px;
+}
